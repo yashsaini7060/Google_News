@@ -1,12 +1,785 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-	<title>Google News</title>
-	<link rel="stylesheet" type="text/css" href="style.css">
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Gajraj+One&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Roboto:ital,wght@0,400;1,300;1,400&display=swap"
+    rel="stylesheet" />
+  <title>Document</title>
 </head>
+
 <body>
-	<div class="header">
-		
-	</div>
+  <nav>
+    <div class="top_nav">
+      <div class="logo_div">
+        <img class="logo" src="./assets/news.png">
+      </div>
+      <div class="big_div">
+        <div class="nav_input">
+        <div class="search">
+          <svg  class="sear" height="24px" fill="#c4c7c5" viewBox="0 0 24 24" width="24px" xmlns="http://www.w3.org/2000/svg"><path d="M20.49,19l-5.73-5.73C15.53,12.2,16,10.91,16,9.5C16,5.91,13.09,3,9.5,3S3,5.91,3,9.5C3,13.09,5.91,16,9.5,16 c1.41,0,2.7-0.47,3.77-1.24L19,20.49L20.49,19z M5,9.5C5,7.01,7.01,5,9.5,5S14,7.01,14,9.5S11.99,14,9.5,14S5,11.99,5,9.5z"></path><path d="M0,0h24v24H0V0z" fill="none"></path></svg>
+        </div>
+        <div class="text">
+          <input class="txt_box" type="text" value="Search for topics, locations & sources" >
+        </div>
+        <div class="dropdown">
+          <img class="drop" src="./assets/icons8-sort-down-100 (2).png" alt="">
+        </div>
+        </div>
+        <div class="input_side">
+          <svg fill="white" width="24" height="24" viewBox="0 0 24 24" focusable="false" class=" NMm5M"><path d="M11 18h2v-2h-2v2zm1-16C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm0-14c-2.21 0-4 1.79-4 4h2c0-1.1.9-2 2-2s2 .9 2 2c0 2-3 1.75-3 5h2c0-2.25 3-2.5 3-5 0-2.21-1.79-4-4-4z"></path></svg>
+          <svg fill="white" width="24" height="24" viewBox="0 0 24 24" focusable="false" class=" NMm5M"><path d="M13.85 22.25h-3.7c-.74 0-1.36-.54-1.45-1.27l-.27-1.89c-.27-.14-.53-.29-.79-.46l-1.8.72c-.7.26-1.47-.03-1.81-.65L2.2 15.53c-.35-.66-.2-1.44.36-1.88l1.53-1.19c-.01-.15-.02-.3-.02-.46 0-.15.01-.31.02-.46l-1.52-1.19c-.59-.45-.74-1.26-.37-1.88l1.85-3.19c.34-.62 1.11-.9 1.79-.63l1.81.73c.26-.17.52-.32.78-.46l.27-1.91c.09-.7.71-1.25 1.44-1.25h3.7c.74 0 1.36.54 1.45 1.27l.27 1.89c.27.14.53.29.79.46l1.8-.72c.71-.26 1.48.03 1.82.65l1.84 3.18c.36.66.2 1.44-.36 1.88l-1.52 1.19c.01.15.02.3.02.46s-.01.31-.02.46l1.52 1.19c.56.45.72 1.23.37 1.86l-1.86 3.22c-.34.62-1.11.9-1.8.63l-1.8-.72c-.26.17-.52.32-.78.46l-.27 1.91c-.1.68-.72 1.22-1.46 1.22zm-3.23-2h2.76l.37-2.55.53-.22c.44-.18.88-.44 1.34-.78l.45-.34 2.38.96 1.38-2.4-2.03-1.58.07-.56c.03-.26.06-.51.06-.78s-.03-.53-.06-.78l-.07-.56 2.03-1.58-1.39-2.4-2.39.96-.45-.35c-.42-.32-.87-.58-1.33-.77l-.52-.22-.37-2.55h-2.76l-.37 2.55-.53.21c-.44.19-.88.44-1.34.79l-.45.33-2.38-.95-1.39 2.39 2.03 1.58-.07.56a7 7 0 0 0-.06.79c0 .26.02.53.06.78l.07.56-2.03 1.58 1.38 2.4 2.39-.96.45.35c.43.33.86.58 1.33.77l.53.22.38 2.55z"></path><circle cx="12" cy="12" r="3.5"></circle></svg>
+        </div>
+      </div>
+      <div class="side_items">
+        <svg class="options" height="24" width="24" fill="white" viewBox="0 0 24 24"><path d="M6,8c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM12,20c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM6,20c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM6,14c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM12,14c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM16,6c0,1.1 0.9,2 2,2s2,-0.9 2,-2 -0.9,-2 -2,-2 -2,0.9 -2,2zM12,8c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM18,14c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM18,20c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2z"></path></svg>
+        <img class="side_img" src="https://lh3.googleusercontent.com/ogw/AOLn63GOYM3IH3b4VvFsR-pOtj-aZcX4czTQ6LmBOpErWQ=s32-c-mo">
+      </div>
+    </div>
+    <div class="bottom_nav">
+      <div class="bottom_item side">
+        <h4>Home</h4>
+        <h4>For you</h4>
+        <h4>Follower</h4>
+        <h4>News Showcase</h4>
+      </div>
+      <div class="mid"></div>
+      <div class="bottom_item">
+        <h4>India</h4>
+        <h4>World</h4>
+        <h4>Local</h4>
+        <h4>Business</h4>
+        <h4>Technology</h4>
+        <h4>Entertainment</h4>
+        <h4>Sports</h4>
+        <h4>Science</h4>
+        <h4>Health</h4>
+      </div>
+    </div>
+  </nav>
+  
+
+  <div class="main">
+    <div class="main_top">
+
+      <div class="main_top_left">
+        <h1>Your briefing</h1>
+        <p>Sunday, 9 Aprail</p>
+      </div>
+
+      <div class="main_top_right">
+        <div class="main_top_right_arrow"><svg width="20" height="20" viewBox="0 0 24 24" focusable="false" fill="white" style="background-color: #1F1F1F; margin-top:25px; border-radius:12px 0px 0px 12px;">
+            <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12l4.58-4.59z"></path>
+          </svg></div>
+        <div class="main_top_right_img">
+          <svg class="weather" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1500 1500"
+            preserveAspectRatio="xMidYMid meet" style="width: 68px; height: 68px;">
+            <defs>
+              <clipPath id="__lottie_element_2">
+                <rect width="1500" height="1500" x="0" y="0"></rect>
+              </clipPath>
+              <linearGradient id="__lottie_element_6" spreadMethod="pad" gradientUnits="userSpaceOnUse"
+                x1="-231.8000030517578" y1="-233.33200073242188" x2="14.755999565124512" y2="20.461999893188477">
+                <stop offset="0%" stop-color="rgb(255,235,175)"></stop>
+                <stop offset="50%" stop-color="rgb(253,211,90)"></stop>
+                <stop offset="100%" stop-color="rgb(251,188,4)"></stop>
+              </linearGradient>
+              <linearGradient id="__lottie_element_9" spreadMethod="pad" gradientUnits="userSpaceOnUse"
+                x1="59.073001861572266" y1="67.5270004272461" x2="-116.45600128173828" y2="-113.58499908447266">
+                <stop offset="0%" stop-color="rgb(252,211,92)" stop-opacity="1"></stop>
+                <stop offset="50%" stop-color="rgb(252,211,92)" stop-opacity="0.75"></stop>
+                <stop offset="100%" stop-color="rgb(252,211,92)" stop-opacity="0.5"></stop>
+              </linearGradient>
+            </defs>
+            <g clip-path="url(#__lottie_element_2)">
+              <g transform="matrix(1.4667999744415283,0,0,1.4667999744415283,1102.0927734375,1109.71923828125)"
+                opacity="0.9999910208793047" style="display: block;">
+                <g opacity="1"
+                  transform="matrix(1.2410099506378174,0,0,1.220810055732727,-239.30288696289062,-245.065673828125)">
+                  <path fill="url(#__lottie_element_6)" fill-opacity="1"
+                    d=" M0,-208.77349853515625 C115.22209167480469,-208.77349853515625 208.77349853515625,-115.22209167480469 208.77349853515625,0 C208.77349853515625,115.22209167480469 115.22209167480469,208.77349853515625 0,208.77349853515625 C-115.22209167480469,208.77349853515625 -208.77349853515625,115.22209167480469 -208.77349853515625,0 C-208.77349853515625,-115.22209167480469 -115.22209167480469,-208.77349853515625 0,-208.77349853515625z">
+                  </path>
+                </g>
+              </g>
+              <g transform="matrix(1.229989767074585,0,0,1.229989767074585,764.2115478515625,770.0003051757812)"
+                opacity="0.9999910208793047" style="display: block;">
+                <path stroke="url(#__lottie_element_9)" stroke-linecap="butt" stroke-linejoin="miter" fill-opacity="0"
+                  stroke-miterlimit="4" stroke-opacity="1" stroke-width="25"
+                  d=" M61.1,-391.84 C92.87,-408.03 131.22,-395.04 147.78,-362.49 C147.78,-362.49 169.1,-320.63 169.1,-320.63 C178.57,-302.02 195.76,-289 215.67,-285.37 C215.67,-285.37 260.44,-277.18 260.44,-277.18 C295.26,-270.81 318.98,-236.82 314.02,-200.33 C314.02,-200.33 307.65,-153.42 307.65,-153.42 C304.81,-132.55 311.38,-111.49 325.44,-96.35 C325.44,-96.35 357.04,-62.3 357.04,-62.3 C381.62,-35.81 381.62,6.22 357.04,32.71 C357.04,32.71 325.44,66.75 325.44,66.75 C311.38,81.9 304.81,102.96 307.65,123.82 C307.65,123.82 314.02,170.73 314.02,170.73 C318.98,207.21 295.26,241.22 260.44,247.59 C260.44,247.59 215.67,255.77 215.67,255.77 C195.76,259.42 178.57,272.43 169.1,291.05 C169.1,291.05 147.78,332.9 147.78,332.9 C131.22,365.45 92.87,378.43 61.1,362.25 C61.1,362.25 20.27,341.44 20.27,341.44 C2.1,332.19 -19.15,332.19 -37.3,341.44 C-37.3,341.44 -78.15,362.25 -78.15,362.25 C-109.91,378.43 -148.25,365.45 -164.83,332.9 C-164.83,332.9 -186.13,291.05 -186.13,291.05 C-195.61,272.43 -212.79,259.42 -232.71,255.77 C-232.71,255.77 -277.48,247.59 -277.48,247.59 C-312.3,241.22 -336.01,207.21 -331.06,170.73 C-331.06,170.73 -324.69,123.82 -324.69,123.82 C-321.85,102.96 -328.43,81.9 -342.48,66.75 C-342.48,66.75 -374.09,32.71 -374.09,32.71 C-398.67,6.22 -398.67,-35.81 -374.09,-62.3 C-374.09,-62.3 -342.48,-96.35 -342.48,-96.35 C-328.43,-111.49 -321.85,-132.55 -324.69,-153.42 C-324.69,-153.42 -331.06,-200.33 -331.06,-200.33 C-336.01,-236.82 -312.3,-270.81 -277.48,-277.18 C-277.48,-277.18 -232.71,-285.37 -232.71,-285.37 C-212.79,-289 -195.61,-302.02 -186.13,-320.63 C-186.13,-320.63 -164.83,-362.49 -164.83,-362.49 C-148.25,-395.04 -109.91,-408.03 -78.15,-391.84 C-78.15,-391.84 -37.3,-371.04 -37.3,-371.04 C-19.15,-361.79 2.1,-361.79 20.27,-371.04 C20.27,-371.04 61.1,-391.84 61.1,-391.84z">
+                </path>
+                <g opacity="1" transform="matrix(5.119999885559082,0,0,5.119999885559082,0,0)"></g>
+              </g>
+            </g>
+          </svg>
+        </div>
+
+        <div class="main_top_right_content">
+          <div class="state">
+            <p>Uttar Pradesh</p>
+            <svg width="12" height="12" fill="white" viewBox="0 0 24 24" focusable="false"
+              style="margin-left: 20px; padding-top:5px;background-color: #1F1F1F;">
+              <path
+                d="M12 8c-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4zm8.94 3A8.994 8.994 0 0 0 13 3.06V1h-2v2.06A8.994 8.994 0 0 0 3.06 11H1v2h2.06A8.994 8.994 0 0 0 11 20.94V23h2v-2.06A8.994 8.994 0 0 0 20.94 13H23v-2h-2.06zM12 19c-3.87 0-7-3.13-7-7s3.13-7 7-7 7 3.13 7 7-3.13 7-7 7z">
+              </path>
+            </svg>
+          </div>
+          <h3>24°C</h3>
+          <a href="#">
+            <p>More on weather.com</p>
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="news_div">
+      <div class="main_news">
+        <a href="#">
+          <h2>Top stories</h2>
+        </a>
+
+        <div class="main_child">
+          <div class="main_child_left">
+            <img class="main_img"
+              src="https://c.ndtvimg.com/2023-04/ejv5grm8_amit-shah-pti-650-_650x400_10_April_23.jpg?im=FeatureCrop,algorithm=dnn,width=650,height=400"
+              alt="" />
+            <div class="main_img_div">
+              <img
+                src="https://lh3.googleusercontent.com/jKYgO8ulUFIuqNkrnSiZUs_d9To3nIljsM8WxTEZPBEt8b_Qh23wFW08cWR1QaT1N2r-cU6spg=s0-h12-rw">
+            </div>
+            <h3>"Nobody Can Take Our Land": Amit Shah In Arunachal Amid China's Objection</h3>
+            <p>30 minutes ago</p>
+          </div>
+          <div class="main_child_right">
+            <div class="main_child_right_ele">
+              <h6>Republic World</h6>
+              <h5>Amit Shah sends out strong message to China from Kibithoo in Arunachal Pradesh</h5>
+              <h5>1 hour ago</h5>
+            </div>
+            <div class="main_child_right_ele">
+              <h6>Republic World</h6>
+              <h5>Amit Shah sends out strong message to China from Kibithoo in Arunachal Pradesh</h5>
+              <h5>1 hour ago</h5>
+            </div>
+            <div class="main_child_right_ele">
+              <h6>Republic World</h6>
+              <h5>Amit Shah sends out strong message to China from Kibithoo in Arunachal Pradesh</h5>
+              <h5>1 hour ago</h5>
+            </div>
+          </div>
+        </div>
+
+        <div class="main_child">
+          <div class="main_child_left">
+            <img class="main_img"
+              src="https://static.theprint.in/wp-content/uploads/2023/03/ANI-20230329173021-e1681107285606.jpg?compress=true&quality=80&w=800&dpr=1.0"
+              alt="" />
+            <div class="main_img_div">
+              <img
+                src="https://lh3.googleusercontent.com/jKYgO8ulUFIuqNkrnSiZUs_d9To3nIljsM8WxTEZPBEt8b_Qh23wFW08cWR1QaT1N2r-cU6spg=s0-h12-rw">
+            </div>
+            <h3>London-bound Air India flight returns to Delhi after unruly passenger hurts 2 crew members</h3>
+            <p>7 hour ago</p>
+          </div>
+          <div class="main_child_right">
+            <div class="main_child_right_ele">
+              <h6>Republic World</h6>
+              <h5>Amit Shah sends out strong message to China from Kibithoo in Arunachal Pradesh</h5>
+              <h5>1 hour ago</h5>
+            </div>
+            <div class="main_child_right_ele">
+              <h6>Republic World</h6>
+              <h5>Amit Shah sends out strong message to China from Kibithoo in Arunachal Pradesh</h5>
+              <h5>1 hour ago</h5>
+            </div>
+            <div class="main_child_right_ele">
+              <h6>Republic World</h6>
+              <h5>Amit Shah sends out strong message to China from Kibithoo in Arunachal Pradesh</h5>
+              <h5>1 hour ago</h5>
+            </div>
+          </div>
+        </div>
+
+        <div class="side_element">
+          <div class="side_ele_left main_left">
+            <img class=""
+              src="https://lh3.googleusercontent.com/jKYgO8ulUFIuqNkrnSiZUs_d9To3nIljsM8WxTEZPBEt8b_Qh23wFW08cWR1QaT1N2r-cU6spg=h12-rw"
+              loading="lazy">
+            <h3>"Objecting To Such Visits...": Centre To China On Amit Shah's Arunachal Visit
+            </h3>
+          </div>
+          <div class="side_ele_right large"><img class="side_ele_right_img"
+              src="https://c.ndtvimg.com/2023-04/ejv5grm8_amit-shah-pti-650-_650x400_10_April_23.jpg?im=FeatureCrop,algorithm=dnn,width=650,height=400"
+              alt=""></div>
+        </div>
+        <div class="time_div">
+          <h5>Yesterday</h5>
+          <img class="cal" alt=""
+            src="https://lh3.googleusercontent.com/JDFOyo903E9WGstK0YhI2ZFOKR3h4qDxBngX5M8XJVBZFKzOBoxLmk3OVlgNw9SOE-HfkNgb=w40-rw">
+        </div>
+
+        <div class="side_element">
+          <div class="side_ele_left main_left">
+            <img class=""
+              src="https://lh3.googleusercontent.com/JufTzTMu9l6RFyXEEfl6ZPdS7xjYhoSXVmDHURyphjVSNK2zH8uWdyJKd9gg0YOYUCop4Alylis=h12-rw"
+              loading="lazy">
+            <h3>Back
+              ‘You can run, but…’, Punjab Police to Amritpal Singh after aide's arrest | Video
+            </h3>
+          </div>
+          <div class="side_ele_right large"><img class="side_ele_right_img"
+              src="https://www.livemint.com/lm-img/img/2023/04/11/600x338/PTI04-11-2023-000103B-0_1681203845997_1681203845997_1681203871160_1681203871160.jpg"
+              alt=""></div>
+        </div>
+        <div class="time_div">
+          <h5>Yesterday</h5>
+          <img class="cal" alt=""
+            src="https://lh3.googleusercontent.com/JDFOyo903E9WGstK0YhI2ZFOKR3h4qDxBngX5M8XJVBZFKzOBoxLmk3OVlgNw9SOE-HfkNgb=w40-rw">
+        </div>
+
+      </div>
+      <div class="side_news">
+        <div class="top_side_div">
+          <div class="city">
+            <a href="#">
+              <h2>Local News</h2>
+            </a>
+            <svg width="24" height="24" viewBox="0 0 24 24" focusable="false" class="control">
+              <path
+                d="M3 17v2h6v-2H3zM3 5v2h10V5H3zm10 16v-2h8v-2h-8v-2h-2v6h2zM7 9v2H3v2h4v2h2V9H7zm14 4v-2H11v2h10zm-6-4h2V7h4V5h-4V3h-2v6z">
+              </path>
+            </svg>
+          </div>
+
+          <div class="cities">
+            <div class="active_city" id="active_city">
+              <h6 class="active_city">Delhi</h6>
+            </div>
+            <div>
+              <h6>Ghaziabad</h6>
+            </div>
+          </div>
+
+          <div class="side_element">
+            <div class="side_ele_left">
+              <img class=""
+                src="https://lh3.googleusercontent.com/jKYgO8ulUFIuqNkrnSiZUs_d9To3nIljsM8WxTEZPBEt8b_Qh23wFW08cWR1QaT1N2r-cU6spg=h12-rw"
+                loading="lazy">
+              <h4>Air India Flight To London Returns To Delhi After Flier "Harms" Cabin Crew</h4>
+            </div>
+            <div class="side_ele_right"><img class="side_ele_right_img"
+                src="https://c.ndtvimg.com/2023-04/aedev0g_air-india-boeing-787_625x300_10_April_23.jpg?im=FeatureCrop,algorithm=dnn,width=650,height=400"
+                alt=""></div>
+          </div>
+          <div class="time_div">
+            <h5>Yesterday</h5>
+            <img class="cal" alt=""
+              src="https://lh3.googleusercontent.com/JDFOyo903E9WGstK0YhI2ZFOKR3h4qDxBngX5M8XJVBZFKzOBoxLmk3OVlgNw9SOE-HfkNgb=w40-rw">
+          </div>
+
+          <div class="side_element">
+            <div class="side_ele_left">
+              <img class="msvBD zC7z7b"
+                srcset="https://lh3.googleusercontent.com/proxy/frhdddi6EkxoZb6eaLxTm52C3sJ30qWjTbvBem_Dj5vaIe7CRLcMWqceFNtHlKmuxNWgLU88rrimxWtPIOojWdV7zRLYQcHEnupwee8rLuumCdFFQ3_8eu3GPVcr7a06apRDgoryUh3m1JuMgSjiy42iE-B5YuDaICFzqzV551wQUG1hoYa2MyQjRKlh=h12-rw 1x, https://lh3.googleusercontent.com/proxy/frhdddi6EkxoZb6eaLxTm52C3sJ30qWjTbvBem_Dj5vaIe7CRLcMWqceFNtHlKmuxNWgLU88rrimxWtPIOojWdV7zRLYQcHEnupwee8rLuumCdFFQ3_8eu3GPVcr7a06apRDgoryUh3m1JuMgSjiy42iE-B5YuDaICFzqzV551wQUG1hoYa2MyQjRKlh=h24-rw 2x"
+                alt=""
+                src="https://lh3.googleusercontent.com/proxy/frhdddi6EkxoZb6eaLxTm52C3sJ30qWjTbvBem_Dj5vaIe7CRLcMWqceFNtHlKmuxNWgLU88rrimxWtPIOojWdV7zRLYQcHEnupwee8rLuumCdFFQ3_8eu3GPVcr7a06apRDgoryUh3m1JuMgSjiy42iE-B5YuDaICFzqzV551wQUG1hoYa2MyQjRKlh=h12-rw"
+                loading="lazy">
+              <h4>Covid cases on rise among kids under 12 years in Delhi</h4>
+            </div>
+            <div class="side_ele_right"><img class="side_ele_right_img"
+                src="https://lh3.googleusercontent.com/proxy/IMuMdKdndu-W5fnSqwnVmST1gzC1UdcRxqQ4OobTKM5rGGDZtkbPgMqgwNNj5FhP9H1PMZaLIP85JRdBCy_RIwM1GMOlAWw84AD-ch27y8kdYF4imNt_ayFsI6isFifeLjqs96vTTzYqgVsrmg=w64-h64-rw-dckQSIaKoG"
+                alt=""></div>
+          </div>
+          <div class="time_div">
+            <h5>Yesterday</h5>
+            <img class="cal" alt=""
+              src="https://lh3.googleusercontent.com/JDFOyo903E9WGstK0YhI2ZFOKR3h4qDxBngX5M8XJVBZFKzOBoxLmk3OVlgNw9SOE-HfkNgb=w40-rw">
+          </div>
+
+          <div class="side_element">
+            <div class="side_ele_left">
+              <img class=""
+                src="https://lh3.googleusercontent.com/jKYgO8ulUFIuqNkrnSiZUs_d9To3nIljsM8WxTEZPBEt8b_Qh23wFW08cWR1QaT1N2r-cU6spg=h12-rw"
+                loading="lazy">
+              <h4>Delhi News Live Updates: ‘Sisodia, Jain targeted by anti-India forces,’ says Kejriwal</h4>
+            </div>
+            <div class="side_ele_right"><img class="side_ele_right_img"
+                src="https://images.indianexpress.com/2023/04/Kejriwal.png?w=750" alt=""></div>
+          </div>
+          <div class="time_div">
+            <h5>Yesterday</h5>
+            <img class="cal" alt=""
+              src="https://lh3.googleusercontent.com/JDFOyo903E9WGstK0YhI2ZFOKR3h4qDxBngX5M8XJVBZFKzOBoxLmk3OVlgNw9SOE-HfkNgb=w40-rw">
+          </div>
+
+
+        </div>
+        <div class="bottom_side_div">
+          <div class="city">
+            <a href="#">
+              <h2>Picks for you</h2>
+            </a>
+
+          </div>
+
+
+
+          <div class="side_element">
+            <div class="side_ele_left">
+              <img class=""
+                src="https://lh3.googleusercontent.com/jKYgO8ulUFIuqNkrnSiZUs_d9To3nIljsM8WxTEZPBEt8b_Qh23wFW08cWR1QaT1N2r-cU6spg=h12-rw"
+                loading="lazy">
+              <h4>Air India Flight To London Returns To Delhi After Flier "Harms" Cabin Crew</h4>
+            </div>
+            <div class="side_ele_right"><img class="side_ele_right_img"
+                src="https://c.ndtvimg.com/2023-04/aedev0g_air-india-boeing-787_625x300_10_April_23.jpg?im=FeatureCrop,algorithm=dnn,width=650,height=400"
+                alt=""></div>
+          </div>
+          <div class="time_div">
+            <h5>Yesterday</h5>
+            <img class="cal" alt=""
+              src="https://lh3.googleusercontent.com/JDFOyo903E9WGstK0YhI2ZFOKR3h4qDxBngX5M8XJVBZFKzOBoxLmk3OVlgNw9SOE-HfkNgb=w40-rw">
+          </div>
+
+          <div class="side_element">
+            <div class="side_ele_left">
+              <img class="msvBD zC7z7b"
+                srcset="https://lh3.googleusercontent.com/proxy/frhdddi6EkxoZb6eaLxTm52C3sJ30qWjTbvBem_Dj5vaIe7CRLcMWqceFNtHlKmuxNWgLU88rrimxWtPIOojWdV7zRLYQcHEnupwee8rLuumCdFFQ3_8eu3GPVcr7a06apRDgoryUh3m1JuMgSjiy42iE-B5YuDaICFzqzV551wQUG1hoYa2MyQjRKlh=h12-rw 1x, https://lh3.googleusercontent.com/proxy/frhdddi6EkxoZb6eaLxTm52C3sJ30qWjTbvBem_Dj5vaIe7CRLcMWqceFNtHlKmuxNWgLU88rrimxWtPIOojWdV7zRLYQcHEnupwee8rLuumCdFFQ3_8eu3GPVcr7a06apRDgoryUh3m1JuMgSjiy42iE-B5YuDaICFzqzV551wQUG1hoYa2MyQjRKlh=h24-rw 2x"
+                alt=""
+                src="https://lh3.googleusercontent.com/proxy/frhdddi6EkxoZb6eaLxTm52C3sJ30qWjTbvBem_Dj5vaIe7CRLcMWqceFNtHlKmuxNWgLU88rrimxWtPIOojWdV7zRLYQcHEnupwee8rLuumCdFFQ3_8eu3GPVcr7a06apRDgoryUh3m1JuMgSjiy42iE-B5YuDaICFzqzV551wQUG1hoYa2MyQjRKlh=h12-rw"
+                loading="lazy">
+              <h4>Covid cases on rise among kids under 12 years in Delhi</h4>
+            </div>
+            <div class="side_ele_right"><img class="side_ele_right_img"
+                src="https://lh3.googleusercontent.com/proxy/IMuMdKdndu-W5fnSqwnVmST1gzC1UdcRxqQ4OobTKM5rGGDZtkbPgMqgwNNj5FhP9H1PMZaLIP85JRdBCy_RIwM1GMOlAWw84AD-ch27y8kdYF4imNt_ayFsI6isFifeLjqs96vTTzYqgVsrmg=w64-h64-rw-dckQSIaKoG"
+                alt=""></div>
+          </div>
+          <div class="time_div">
+            <h5>Yesterday</h5>
+            <img class="cal" alt=""
+              src="https://lh3.googleusercontent.com/JDFOyo903E9WGstK0YhI2ZFOKR3h4qDxBngX5M8XJVBZFKzOBoxLmk3OVlgNw9SOE-HfkNgb=w40-rw">
+          </div>
+
+          <div class="side_element">
+            <div class="side_ele_left">
+              <img class=""
+                src="https://lh3.googleusercontent.com/jKYgO8ulUFIuqNkrnSiZUs_d9To3nIljsM8WxTEZPBEt8b_Qh23wFW08cWR1QaT1N2r-cU6spg=h12-rw"
+                loading="lazy">
+              <h4>Delhi News Live Updates: ‘Sisodia, Jain targeted by anti-India forces,’ says Kejriwal</h4>
+            </div>
+            <div class="side_ele_right"><img class="side_ele_right_img"
+                src="https://images.indianexpress.com/2023/04/Kejriwal.png?w=750" alt=""></div>
+          </div>
+          <div class="time_div">
+            <h5>Yesterday</h5>
+            <img class="cal" alt=""
+              src="https://lh3.googleusercontent.com/JDFOyo903E9WGstK0YhI2ZFOKR3h4qDxBngX5M8XJVBZFKzOBoxLmk3OVlgNw9SOE-HfkNgb=w40-rw">
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+
+    <div class="main_top between">
+
+      <div class="main_top_left">
+        <h1>Your topics</h1>
+      </div>
+
+      <div class="main_top_right customise">
+        <svg width="16" height="16"  viewBox="0 0 24 24" focusable="false" class="control">
+          <path d="M3 17v2h6v-2H3zM3 5v2h10V5H3zm10 16v-2h8v-2h-8v-2h-2v6h2zM7 9v2H3v2h4v2h2V9H7zm14 4v-2H11v2h10zm-6-4h2V7h4V5h-4V3h-2v6z">
+          </path>
+        </svg>
+        <h5>Customise</h5>
+      </div>
+
+    </div>
+
+    <div class="topics">
+
+      <div class="top_side_div topic_item">
+        <div class="city">
+            <h2>India</h2>
+        </div>
+
+
+        <div class="side_element">
+          <div class="side_ele_left">
+            <img class="" src="https://lh3.googleusercontent.com/jKYgO8ulUFIuqNkrnSiZUs_d9To3nIljsM8WxTEZPBEt8b_Qh23wFW08cWR1QaT1N2r-cU6spg=h12-rw" loading="lazy">
+            <h4>Missing INSAS rifle at Bhatinda military station found</h4>
+          </div>
+
+          <div class="side_ele_right"><img class="side_ele_right_img" src="https://englishtribuneimages.blob.core.windows.net/gallary-content/2023/4/2023_4$largeimg_664382985.JPG" alt=""></div>
+        </div>
+        <div class="time_div">
+          <h5>2 hours ago</h5>
+          <img class="cal" alt="" src="https://lh3.googleusercontent.com/JDFOyo903E9WGstK0YhI2ZFOKR3h4qDxBngX5M8XJVBZFKzOBoxLmk3OVlgNw9SOE-HfkNgb=w40-rw">
+        </div>
+
+        <div class="side_element">
+          <div class="side_ele_left">
+            <img class="msvBD zC7z7b" srcset="https://lh3.googleusercontent.com/proxy/frhdddi6EkxoZb6eaLxTm52C3sJ30qWjTbvBem_Dj5vaIe7CRLcMWqceFNtHlKmuxNWgLU88rrimxWtPIOojWdV7zRLYQcHEnupwee8rLuumCdFFQ3_8eu3GPVcr7a06apRDgoryUh3m1JuMgSjiy42iE-B5YuDaICFzqzV551wQUG1hoYa2MyQjRKlh=h12-rw 1x, https://lh3.googleusercontent.com/proxy/frhdddi6EkxoZb6eaLxTm52C3sJ30qWjTbvBem_Dj5vaIe7CRLcMWqceFNtHlKmuxNWgLU88rrimxWtPIOojWdV7zRLYQcHEnupwee8rLuumCdFFQ3_8eu3GPVcr7a06apRDgoryUh3m1JuMgSjiy42iE-B5YuDaICFzqzV551wQUG1hoYa2MyQjRKlh=h24-rw 2x" alt="" src="https://lh3.googleusercontent.com/proxy/frhdddi6EkxoZb6eaLxTm52C3sJ30qWjTbvBem_Dj5vaIe7CRLcMWqceFNtHlKmuxNWgLU88rrimxWtPIOojWdV7zRLYQcHEnupwee8rLuumCdFFQ3_8eu3GPVcr7a06apRDgoryUh3m1JuMgSjiy42iE-B5YuDaICFzqzV551wQUG1hoYa2MyQjRKlh=h12-rw" loading="lazy">
+            <h4>Sullia: Denied ticket, another BJP leader Angara announces retirement from politics</h4>
+          </div>
+          <div class="side_ele_right"><img class="side_ele_right_img" src="https://daijiworld.ap-south-1.linodeobjects.com/Linode/images3/arun_120423_angara.jpg" alt=""></div>
+        </div>
+        <div class="time_div">
+          <h5>5 hours ago</h5>
+          <img class="cal" alt="" src="https://lh3.googleusercontent.com/JDFOyo903E9WGstK0YhI2ZFOKR3h4qDxBngX5M8XJVBZFKzOBoxLmk3OVlgNw9SOE-HfkNgb=w40-rw">
+        </div>
+
+        <div class="side_element">
+          <div class="side_ele_left">
+            <img class="" src="https://lh3.googleusercontent.com/jKYgO8ulUFIuqNkrnSiZUs_d9To3nIljsM8WxTEZPBEt8b_Qh23wFW08cWR1QaT1N2r-cU6spg=h12-rw" loading="lazy">
+            <h4>Supreme Court to study whether Justice Ranganath Mishra panel can be used to decide on quota for Dalit converts</h4>
+          </div>
+          <div class="side_ele_right"><img class="side_ele_right_img" src="https://th-i.thgim.com/public/latest-news/jbeniu/article66730390.ece/alternates/FREE_1200/Amanullah.jpg" alt=""></div>
+        </div>
+        <div class="time_div">
+          <h5>1 hours ago</h5>
+          <img class="cal" alt="" src="https://lh3.googleusercontent.com/JDFOyo903E9WGstK0YhI2ZFOKR3h4qDxBngX5M8XJVBZFKzOBoxLmk3OVlgNw9SOE-HfkNgb=w40-rw">
+        </div>
+
+
+      </div>
+
+      <div class="top_side_div topic_item">
+        <div class="city">
+            <h2>World</h2>
+        </div>
+
+
+        <div class="side_element">
+          <div class="side_ele_left">
+            <img class="" src="https://lh3.googleusercontent.com/jKYgO8ulUFIuqNkrnSiZUs_d9To3nIljsM8WxTEZPBEt8b_Qh23wFW08cWR1QaT1N2r-cU6spg=h12-rw" loading="lazy">
+            <h4>Prince Harry to attend Charles' coronation, Meghan to stay in California</h4>
+          </div>
+          <div class="side_ele_right"><img class="side_ele_right_img" src="https://c.ndtvimg.com/2023-04/aedev0g_air-india-boeing-787_625x300_10_April_23.jpg?im=FeatureCrop,algorithm=dnn,width=650,height=400" alt=""></div>
+        </div>
+        <div class="time_div">
+          <h5>9 hours ago</h5>
+          <img class="cal" alt="" src="https://lh3.googleusercontent.com/JDFOyo903E9WGstK0YhI2ZFOKR3h4qDxBngX5M8XJVBZFKzOBoxLmk3OVlgNw9SOE-HfkNgb=w40-rw">
+        </div>
+
+        <div class="side_element">
+          <div class="side_ele_left">
+            <img class="msvBD zC7z7b" srcset="https://lh3.googleusercontent.com/proxy/frhdddi6EkxoZb6eaLxTm52C3sJ30qWjTbvBem_Dj5vaIe7CRLcMWqceFNtHlKmuxNWgLU88rrimxWtPIOojWdV7zRLYQcHEnupwee8rLuumCdFFQ3_8eu3GPVcr7a06apRDgoryUh3m1JuMgSjiy42iE-B5YuDaICFzqzV551wQUG1hoYa2MyQjRKlh=h12-rw 1x, https://lh3.googleusercontent.com/proxy/frhdddi6EkxoZb6eaLxTm52C3sJ30qWjTbvBem_Dj5vaIe7CRLcMWqceFNtHlKmuxNWgLU88rrimxWtPIOojWdV7zRLYQcHEnupwee8rLuumCdFFQ3_8eu3GPVcr7a06apRDgoryUh3m1JuMgSjiy42iE-B5YuDaICFzqzV551wQUG1hoYa2MyQjRKlh=h24-rw 2x" alt="" src="https://lh3.googleusercontent.com/proxy/frhdddi6EkxoZb6eaLxTm52C3sJ30qWjTbvBem_Dj5vaIe7CRLcMWqceFNtHlKmuxNWgLU88rrimxWtPIOojWdV7zRLYQcHEnupwee8rLuumCdFFQ3_8eu3GPVcr7a06apRDgoryUh3m1JuMgSjiy42iE-B5YuDaICFzqzV551wQUG1hoYa2MyQjRKlh=h12-rw" loading="lazy">
+            <h4>Bodycam Footage Shows How US Cops Took Down Bank Shooter Who Killed 5</h4>
+          </div>
+          <div class="side_ele_right"><img class="side_ele_right_img" src="https://c.ndtvimg.com/2023-04/f3f1i63o_bodycam-us-bank-shooter-_625x300_12_April_23.jpg?im=FeatureCrop,algorithm=dnn,width=650,height=400" alt=""></div>
+        </div>
+        <div class="time_div">
+          <h5>13 hours ago</h5>
+          <img class="cal" alt="" src="https://lh3.googleusercontent.com/JDFOyo903E9WGstK0YhI2ZFOKR3h4qDxBngX5M8XJVBZFKzOBoxLmk3OVlgNw9SOE-HfkNgb=w40-rw">
+        </div>
+
+        <div class="side_element">
+          <div class="side_ele_left">
+            <img class="" src="https://lh3.googleusercontent.com/jKYgO8ulUFIuqNkrnSiZUs_d9To3nIljsM8WxTEZPBEt8b_Qh23wFW08cWR1QaT1N2r-cU6spg=h12-rw" loading="lazy">
+            <h4>Watch: Arnold Schwarzenegger Fixes Neighbourhood Pothole After Waiting For Authority To Do It</h4>
+          </div>
+          <div class="side_ele_right"><img class="side_ele_right_img" src="https://c.ndtvimg.com/2023-04/ui869v6g_arnold-schwarzenegger_625x300_12_April_23.jpg" alt=""></div>
+        </div>
+        <div class="time_div">
+          <h5>11 hours ago</h5>
+          <img class="cal" alt="" src="https://lh3.googleusercontent.com/JDFOyo903E9WGstK0YhI2ZFOKR3h4qDxBngX5M8XJVBZFKzOBoxLmk3OVlgNw9SOE-HfkNgb=w40-rw">
+        </div>
+
+
+      </div>
+
+      <div class="top_side_div topic_item">
+        <div class="city">
+            <h2>Business</h2>
+        </div>
+
+
+        <div class="side_element">
+          <div class="side_ele_left">
+            <img class="" src="https://lh3.googleusercontent.com/jKYgO8ulUFIuqNkrnSiZUs_d9To3nIljsM8WxTEZPBEt8b_Qh23wFW08cWR1QaT1N2r-cU6spg=h12-rw" loading="lazy">
+            <h4>TCS Q4 Results Highlights | This my last presentation as CEO and MD, says Rajesh Gopinathan</h4>
+          </div>
+          <div class="side_ele_right"><img class="side_ele_right_img" src="https://images.cnbctv18.com/wp-content/uploads/2019/01/TCS-Campus-10-e1617109423955.jpg?impolicy=website&width=600&height=264" alt=""></div>
+        </div>
+        <div class="time_div">
+          <h5>2 hours ago</h5>
+          <img class="cal" alt="" src="https://lh3.googleusercontent.com/JDFOyo903E9WGstK0YhI2ZFOKR3h4qDxBngX5M8XJVBZFKzOBoxLmk3OVlgNw9SOE-HfkNgb=w40-rw">
+        </div>
+
+        <div class="side_element">
+          <div class="side_ele_left">
+            <img class="msvBD zC7z7b" srcset="https://lh3.googleusercontent.com/proxy/frhdddi6EkxoZb6eaLxTm52C3sJ30qWjTbvBem_Dj5vaIe7CRLcMWqceFNtHlKmuxNWgLU88rrimxWtPIOojWdV7zRLYQcHEnupwee8rLuumCdFFQ3_8eu3GPVcr7a06apRDgoryUh3m1JuMgSjiy42iE-B5YuDaICFzqzV551wQUG1hoYa2MyQjRKlh=h12-rw 1x, https://lh3.googleusercontent.com/proxy/frhdddi6EkxoZb6eaLxTm52C3sJ30qWjTbvBem_Dj5vaIe7CRLcMWqceFNtHlKmuxNWgLU88rrimxWtPIOojWdV7zRLYQcHEnupwee8rLuumCdFFQ3_8eu3GPVcr7a06apRDgoryUh3m1JuMgSjiy42iE-B5YuDaICFzqzV551wQUG1hoYa2MyQjRKlh=h24-rw 2x" alt="" src="https://lh3.googleusercontent.com/proxy/frhdddi6EkxoZb6eaLxTm52C3sJ30qWjTbvBem_Dj5vaIe7CRLcMWqceFNtHlKmuxNWgLU88rrimxWtPIOojWdV7zRLYQcHEnupwee8rLuumCdFFQ3_8eu3GPVcr7a06apRDgoryUh3m1JuMgSjiy42iE-B5YuDaICFzqzV551wQUG1hoYa2MyQjRKlh=h12-rw" loading="lazy">
+            <h4>Dollar falls, stocks rise after cooler U.S. inflation data</h4>
+          </div>
+          <div class="side_ele_right"><img class="side_ele_right_img" src="https://i-invdn-com.investing.com/trkd-images/LYNXMPEJ3B025_L.jpg" alt=""></div>
+        </div>
+        <div class="time_div">
+          <h5>6 hours ago</h5>
+          <img class="cal" alt="" src="https://lh3.googleusercontent.com/JDFOyo903E9WGstK0YhI2ZFOKR3h4qDxBngX5M8XJVBZFKzOBoxLmk3OVlgNw9SOE-HfkNgb=w40-rw">
+        </div>
+
+        <div class="side_element">
+          <div class="side_ele_left">
+            <img class="" src="https://lh3.googleusercontent.com/jKYgO8ulUFIuqNkrnSiZUs_d9To3nIljsM8WxTEZPBEt8b_Qh23wFW08cWR1QaT1N2r-cU6spg=h12-rw" loading="lazy">
+            <h4>IP growth edges up to 5.6% in February</h4>
+          </div>
+          <div class="side_ele_right"><img class="side_ele_right_img" src="https://images.moneycontrol.com/static-mcnews/2021/03/auto-manufacturing-770x433.jpg?impolicy=website&width=770&height=431" alt=""></div>
+        </div>
+        <div class="time_div">
+          <h5>8 hours ago</h5>
+          <img class="cal" alt="" src="https://lh3.googleusercontent.com/JDFOyo903E9WGstK0YhI2ZFOKR3h4qDxBngX5M8XJVBZFKzOBoxLmk3OVlgNw9SOE-HfkNgb=w40-rw">
+        </div>
+
+
+      </div>
+
+      <div class="top_side_div topic_item">
+        <div class="city">
+            <h2>Technology</h2>
+        </div>
+
+
+        <div class="side_element">
+          <div class="side_ele_left">
+            <img class="" src="https://lh3.googleusercontent.com/jKYgO8ulUFIuqNkrnSiZUs_d9To3nIljsM8WxTEZPBEt8b_Qh23wFW08cWR1QaT1N2r-cU6spg=h12-rw" loading="lazy">
+            <h4>Realme Narzo N55 budget phone launched in India starting at Rs 10,999: Specs, features and more</h4>
+          </div>
+          <div class="side_ele_right"><img class="side_ele_right_img" src="https://www.financialexpress.com/wp-content/uploads/2023/04/unnamed-3-1.jpg" alt=""></div>
+        </div>
+        <div class="time_div">
+          <h5>7 hours ago</h5>
+          <img class="cal" alt="" src="https://lh3.googleusercontent.com/JDFOyo903E9WGstK0YhI2ZFOKR3h4qDxBngX5M8XJVBZFKzOBoxLmk3OVlgNw9SOE-HfkNgb=w40-rw">
+        </div>
+
+        <div class="side_element">
+          <div class="side_ele_left">
+            <img class="msvBD zC7z7b" srcset="https://lh3.googleusercontent.com/proxy/frhdddi6EkxoZb6eaLxTm52C3sJ30qWjTbvBem_Dj5vaIe7CRLcMWqceFNtHlKmuxNWgLU88rrimxWtPIOojWdV7zRLYQcHEnupwee8rLuumCdFFQ3_8eu3GPVcr7a06apRDgoryUh3m1JuMgSjiy42iE-B5YuDaICFzqzV551wQUG1hoYa2MyQjRKlh=h12-rw 1x, https://lh3.googleusercontent.com/proxy/frhdddi6EkxoZb6eaLxTm52C3sJ30qWjTbvBem_Dj5vaIe7CRLcMWqceFNtHlKmuxNWgLU88rrimxWtPIOojWdV7zRLYQcHEnupwee8rLuumCdFFQ3_8eu3GPVcr7a06apRDgoryUh3m1JuMgSjiy42iE-B5YuDaICFzqzV551wQUG1hoYa2MyQjRKlh=h24-rw 2x" alt="" src="https://lh3.googleusercontent.com/proxy/frhdddi6EkxoZb6eaLxTm52C3sJ30qWjTbvBem_Dj5vaIe7CRLcMWqceFNtHlKmuxNWgLU88rrimxWtPIOojWdV7zRLYQcHEnupwee8rLuumCdFFQ3_8eu3GPVcr7a06apRDgoryUh3m1JuMgSjiy42iE-B5YuDaICFzqzV551wQUG1hoYa2MyQjRKlh=h12-rw" loading="lazy">
+            <h4>Garena Free Fire MAX Redeem Codes April 13: Get Gloo Wall skins, pets, and more rewards free of cost, CHECK DETAILS</h4>
+          </div>
+          <div class="side_ele_right"><img class="side_ele_right_img" src="https://www.insidesport.in/wp-content/uploads/2023/04/1e84951ea4e43a94485c30851c151ad2.jpg?resize=690,388" alt=""></div>
+        </div>
+        <div class="time_div">
+          <h5>6 hours ago</h5>
+          <img class="cal" alt="" src="https://lh3.googleusercontent.com/JDFOyo903E9WGstK0YhI2ZFOKR3h4qDxBngX5M8XJVBZFKzOBoxLmk3OVlgNw9SOE-HfkNgb=w40-rw">
+        </div>
+
+        <div class="side_element">
+          <div class="side_ele_left">
+            <img class="" src="https://lh3.googleusercontent.com/jKYgO8ulUFIuqNkrnSiZUs_d9To3nIljsM8WxTEZPBEt8b_Qh23wFW08cWR1QaT1N2r-cU6spg=h12-rw" loading="lazy">
+            <h4>Acer launches new gaming laptop 'Predator Helios 16' at Rs 199,990 in India</h4>
+          </div>
+          <div class="side_ele_right"><img class="side_ele_right_img" src="https://bsmedia.business-standard.com/_media/bs/img/article/2023-04/03/full/1680521693-7656.jpg?im=FeatureCrop,width=826,height=465" alt=""></div>
+        </div>
+        <div class="time_div">
+          <h5>8 hours ago</h5>
+          <img class="cal" alt="" src="https://lh3.googleusercontent.com/JDFOyo903E9WGstK0YhI2ZFOKR3h4qDxBngX5M8XJVBZFKzOBoxLmk3OVlgNw9SOE-HfkNgb=w40-rw">
+        </div>
+
+
+      </div>
+
+      <div class="top_side_div topic_item">
+        <div class="city">
+            <h2>Entertainment</h2>
+        </div>
+
+
+        <div class="side_element">
+          <div class="side_ele_left">
+            <img class="" src="https://lh3.googleusercontent.com/jKYgO8ulUFIuqNkrnSiZUs_d9To3nIljsM8WxTEZPBEt8b_Qh23wFW08cWR1QaT1N2r-cU6spg=h12-rw" loading="lazy">
+            <h4>Pics: Shraddha Kapoor, Kriti Sanon And Varun Dhawan Lead Celeb Roll Call At Jio Studios Event</h4>
+          </div>
+
+          <div class="side_ele_right"><img class="side_ele_right_img" src="https://c.ndtvimg.com/2023-04/9p1cgolg_shraddha_625x300_12_April_23.jpg" alt=""></div>
+        </div>
+        <div class="time_div">
+          <h5>2 hours ago</h5>
+          <img class="cal" alt="" src="https://lh3.googleusercontent.com/JDFOyo903E9WGstK0YhI2ZFOKR3h4qDxBngX5M8XJVBZFKzOBoxLmk3OVlgNw9SOE-HfkNgb=w40-rw">
+        </div>
+
+        <div class="side_element">
+          <div class="side_ele_left">
+            <img class="msvBD zC7z7b" srcset="https://lh3.googleusercontent.com/proxy/frhdddi6EkxoZb6eaLxTm52C3sJ30qWjTbvBem_Dj5vaIe7CRLcMWqceFNtHlKmuxNWgLU88rrimxWtPIOojWdV7zRLYQcHEnupwee8rLuumCdFFQ3_8eu3GPVcr7a06apRDgoryUh3m1JuMgSjiy42iE-B5YuDaICFzqzV551wQUG1hoYa2MyQjRKlh=h12-rw 1x, https://lh3.googleusercontent.com/proxy/frhdddi6EkxoZb6eaLxTm52C3sJ30qWjTbvBem_Dj5vaIe7CRLcMWqceFNtHlKmuxNWgLU88rrimxWtPIOojWdV7zRLYQcHEnupwee8rLuumCdFFQ3_8eu3GPVcr7a06apRDgoryUh3m1JuMgSjiy42iE-B5YuDaICFzqzV551wQUG1hoYa2MyQjRKlh=h24-rw 2x" alt="" src="https://lh3.googleusercontent.com/proxy/frhdddi6EkxoZb6eaLxTm52C3sJ30qWjTbvBem_Dj5vaIe7CRLcMWqceFNtHlKmuxNWgLU88rrimxWtPIOojWdV7zRLYQcHEnupwee8rLuumCdFFQ3_8eu3GPVcr7a06apRDgoryUh3m1JuMgSjiy42iE-B5YuDaICFzqzV551wQUG1hoYa2MyQjRKlh=h12-rw" loading="lazy">
+            <h4>First reactions for Samantha Ruth Prabhu's Shaakuntalam are in; actor gets 'standing ovation', cast called brilliant</h4>
+          </div>
+          <div class="side_ele_right"><img class="side_ele_right_img" src="https://www.hindustantimes.com/ht-img/img/2023/04/12/550x309/samantha-ruth-prabhu-shakuntala-in-shaakuntalam_1681288621841_1681288678884_1681288678884.jpg" alt=""></div>
+        </div>
+        <div class="time_div">
+          <h5>12 hours ago</h5>
+          <img class="cal" alt="" src="https://lh3.googleusercontent.com/JDFOyo903E9WGstK0YhI2ZFOKR3h4qDxBngX5M8XJVBZFKzOBoxLmk3OVlgNw9SOE-HfkNgb=w40-rw">
+        </div>
+
+        <div class="side_element">
+          <div class="side_ele_left">
+            <img class="" src="https://lh3.googleusercontent.com/jKYgO8ulUFIuqNkrnSiZUs_d9To3nIljsM8WxTEZPBEt8b_Qh23wFW08cWR1QaT1N2r-cU6spg=h12-rw" loading="lazy">
+            <h4>Aamir Khan sportingly jokes about Laal Singh Chaddha's failure in an ad; fans say it is 'sign of a great actor'</h4>
+          </div>
+          <div class="side_ele_right"><img class="side_ele_right_img" src="https://th-i.thgim.com/public/latest-news/jbeniu/article66730390.ece/alternates/FREE_1200/Amanullah.jpg" alt=""></div>
+        </div>
+        <div class="time_div">
+          <h5>11 hours ago</h5>
+          <img class="cal" alt="" src="https://lh3.googleusercontent.com/JDFOyo903E9WGstK0YhI2ZFOKR3h4qDxBngX5M8XJVBZFKzOBoxLmk3OVlgNw9SOE-HfkNgb=w40-rw">
+        </div>
+
+
+      </div>
+
+      <div class="top_side_div topic_item">
+        <div class="city">
+            <h2>Sports</h2>
+        </div>
+
+
+        <div class="side_element">
+          <div class="side_ele_left">
+            <img class="" src="https://lh3.googleusercontent.com/jKYgO8ulUFIuqNkrnSiZUs_d9To3nIljsM8WxTEZPBEt8b_Qh23wFW08cWR1QaT1N2r-cU6spg=h12-rw" loading="lazy">
+            <h4>CSK vs RR Highlights, IPL 2023: MS Dhoni's Valiant Effort In Vain As RR Edge Past CSK In Thriller</h4>
+          </div>
+          <div class="side_ele_right"><img class="side_ele_right_img" src="https://c.ndtvimg.com/2023-04/6mr16l28_dhoni-jadeja-bcci_625x300_12_April_23.jpg?im=FaceCrop,algorithm=dnn,width=806,height=605" alt=""></div>
+        </div>
+        <div class="time_div">
+          <h5>1 hours ago</h5>
+          <img class="cal" alt="" src="https://lh3.googleusercontent.com/JDFOyo903E9WGstK0YhI2ZFOKR3h4qDxBngX5M8XJVBZFKzOBoxLmk3OVlgNw9SOE-HfkNgb=w40-rw">
+        </div>
+
+        <div class="side_element">
+          <div class="side_ele_left">
+            <img class="msvBD zC7z7b" srcset="https://lh3.googleusercontent.com/proxy/frhdddi6EkxoZb6eaLxTm52C3sJ30qWjTbvBem_Dj5vaIe7CRLcMWqceFNtHlKmuxNWgLU88rrimxWtPIOojWdV7zRLYQcHEnupwee8rLuumCdFFQ3_8eu3GPVcr7a06apRDgoryUh3m1JuMgSjiy42iE-B5YuDaICFzqzV551wQUG1hoYa2MyQjRKlh=h12-rw 1x, https://lh3.googleusercontent.com/proxy/frhdddi6EkxoZb6eaLxTm52C3sJ30qWjTbvBem_Dj5vaIe7CRLcMWqceFNtHlKmuxNWgLU88rrimxWtPIOojWdV7zRLYQcHEnupwee8rLuumCdFFQ3_8eu3GPVcr7a06apRDgoryUh3m1JuMgSjiy42iE-B5YuDaICFzqzV551wQUG1hoYa2MyQjRKlh=h24-rw 2x" alt="" src="https://lh3.googleusercontent.com/proxy/frhdddi6EkxoZb6eaLxTm52C3sJ30qWjTbvBem_Dj5vaIe7CRLcMWqceFNtHlKmuxNWgLU88rrimxWtPIOojWdV7zRLYQcHEnupwee8rLuumCdFFQ3_8eu3GPVcr7a06apRDgoryUh3m1JuMgSjiy42iE-B5YuDaICFzqzV551wQUG1hoYa2MyQjRKlh=h12-rw" loading="lazy">
+            <h4>Antim wins Asian Championships silver, now comes the Vinesh question</h4>
+          </div>
+          <div class="side_ele_right"><img class="side_ele_right_img" src="https://a4.espncdn.com/combiner/i?img=%2Fphoto%2F2023%2F0412%2Fr1157747_899x506_16%2D9.jpg&w=899&h=506&scale=crop&cquality=80&location=origin&format=jpg" alt=""></div>
+        </div>
+        <div class="time_div">
+          <h5>8 hours ago</h5>
+          <img class="cal" alt="" src="https://lh3.googleusercontent.com/JDFOyo903E9WGstK0YhI2ZFOKR3h4qDxBngX5M8XJVBZFKzOBoxLmk3OVlgNw9SOE-HfkNgb=w40-rw">
+        </div>
+
+        <div class="side_element">
+          <div class="side_ele_left">
+            <img class="" src="https://lh3.googleusercontent.com/jKYgO8ulUFIuqNkrnSiZUs_d9To3nIljsM8WxTEZPBEt8b_Qh23wFW08cWR1QaT1N2r-cU6spg=h12-rw" loading="lazy">
+            <h4>It can only be up from here, says Delhi Capitals' Sourav Ganguly</h4>
+          </div>
+          <div class="side_ele_right"><img class="side_ele_right_img" src="https://c.ndtvimg.com/2023-04/ui869v6g_arnold-schwarzenegger_625x300_12_April_23.jpg" alt=""></div>
+        </div>
+        <div class="time_div">
+          <h5>4 hours ago</h5>
+          <img class="cal" alt="" src="https://lh3.googleusercontent.com/JDFOyo903E9WGstK0YhI2ZFOKR3h4qDxBngX5M8XJVBZFKzOBoxLmk3OVlgNw9SOE-HfkNgb=w40-rw">
+        </div>
+
+
+      </div>
+
+      
+      
+    </div>
+
+    <div class="main_top between">
+
+      <div class="main_top_left">
+        <h1>For you</h1>
+        <p>Recommended based on your interests</p>
+      </div>
+
+    </div>
+
+    <div class="two_div">
+      <div class="left">
+        <div class="side_element top">
+        <div class="side_ele_left">
+          <img class="" src="https://lh3.googleusercontent.com/jKYgO8ulUFIuqNkrnSiZUs_d9To3nIljsM8WxTEZPBEt8b_Qh23wFW08cWR1QaT1N2r-cU6spg=h12-rw" loading="lazy">
+          <h4>Missing veterans in BJP list sparks row in Karnataka</h4>
+        </div>
+
+        <div class="side_ele_right two_right"><img class="side_ele_right_img" src="https://www.hindustantimes.com/ht-img/img/2023/04/11/550x309/Former-chief-minister-Jagdish-Shettar-reacted-shar_1681240707724.jpg" alt=""></div>
+        </div>
+        <div class="time_div">
+        <h5>2 hours ago</h5>
+        <img class="cal" alt="" src="https://lh3.googleusercontent.com/JDFOyo903E9WGstK0YhI2ZFOKR3h4qDxBngX5M8XJVBZFKzOBoxLmk3OVlgNw9SOE-HfkNgb=w40-rw">
+        </div>
+
+        <div class="side_element">
+        <div class="side_ele_left">
+          <img class="msvBD zC7z7b" srcset="https://lh3.googleusercontent.com/proxy/frhdddi6EkxoZb6eaLxTm52C3sJ30qWjTbvBem_Dj5vaIe7CRLcMWqceFNtHlKmuxNWgLU88rrimxWtPIOojWdV7zRLYQcHEnupwee8rLuumCdFFQ3_8eu3GPVcr7a06apRDgoryUh3m1JuMgSjiy42iE-B5YuDaICFzqzV551wQUG1hoYa2MyQjRKlh=h12-rw 1x, https://lh3.googleusercontent.com/proxy/frhdddi6EkxoZb6eaLxTm52C3sJ30qWjTbvBem_Dj5vaIe7CRLcMWqceFNtHlKmuxNWgLU88rrimxWtPIOojWdV7zRLYQcHEnupwee8rLuumCdFFQ3_8eu3GPVcr7a06apRDgoryUh3m1JuMgSjiy42iE-B5YuDaICFzqzV551wQUG1hoYa2MyQjRKlh=h24-rw 2x" alt="" src="https://lh3.googleusercontent.com/proxy/frhdddi6EkxoZb6eaLxTm52C3sJ30qWjTbvBem_Dj5vaIe7CRLcMWqceFNtHlKmuxNWgLU88rrimxWtPIOojWdV7zRLYQcHEnupwee8rLuumCdFFQ3_8eu3GPVcr7a06apRDgoryUh3m1JuMgSjiy42iE-B5YuDaICFzqzV551wQUG1hoYa2MyQjRKlh=h12-rw" loading="lazy">
+          <h4>Why Apple stores opening in India is a big win for consumers</h4>
+        </div>
+        <div class="side_ele_right two_right"><img class="side_ele_right_img" src="https://images.fonearena.com/blog/wp-content/uploads/2023/04/Apple-Store_9.jpg" alt=""></div>
+        </div>
+        <div class="time_div">
+        <h5>5 hours ago</h5>
+        <img class="cal" alt="" src="https://lh3.googleusercontent.com/JDFOyo903E9WGstK0YhI2ZFOKR3h4qDxBngX5M8XJVBZFKzOBoxLmk3OVlgNw9SOE-HfkNgb=w40-rw">
+        </div>
+
+        <div class="side_element">
+        <div class="side_ele_left">
+          <img class="" src="https://lh3.googleusercontent.com/jKYgO8ulUFIuqNkrnSiZUs_d9To3nIljsM8WxTEZPBEt8b_Qh23wFW08cWR1QaT1N2r-cU6spg=h12-rw" loading="lazy">
+          <h4>'Wolverine' can find and fix bugs in your Python code automatically</h4>
+        </div>
+        <div class="side_ele_right two_right"><img class="side_ele_right_img" src="https://images.interestingengineering.com/1200x675/filters:format(webp)/2023/04/12/image/jpeg/jpP12KBTlwlpWeE6iFQTXqT32GziN201kHHEd4aY.jpg" alt=""></div>
+        </div>
+        <div class="time_div">
+        <h5>1 hours ago</h5>
+        <img class="cal" alt="" src="https://lh3.googleusercontent.com/JDFOyo903E9WGstK0YhI2ZFOKR3h4qDxBngX5M8XJVBZFKzOBoxLmk3OVlgNw9SOE-HfkNgb=w40-rw">
+        </div>
+      </div>
+
+      <div class="middle"></div>
+
+      <div class="right">
+        <div class="side_element top">
+        <div class="side_ele_left">
+          <img class="" src="https://lh3.googleusercontent.com/jKYgO8ulUFIuqNkrnSiZUs_d9To3nIljsM8WxTEZPBEt8b_Qh23wFW08cWR1QaT1N2r-cU6spg=h12-rw" loading="lazy">
+          <h4>Bitcoin price rally likely to continue with open-interest hitting five-month peak</h4>
+        </div>
+
+        <div class="side_ele_right two_right"><img class="side_ele_right_img" src="https://editorial.fxstreet.com/miscelaneous/Screenshot%202023-04-12%20at%205.09.54%20PM-638168969980635195.png" alt=""></div>
+        </div>
+        <div class="time_div">
+        <h5>8 hours ago</h5>
+        <img class="cal" alt="" src="https://lh3.googleusercontent.com/JDFOyo903E9WGstK0YhI2ZFOKR3h4qDxBngX5M8XJVBZFKzOBoxLmk3OVlgNw9SOE-HfkNgb=w40-rw">
+        </div>
+
+        <div class="side_element">
+        <div class="side_ele_left">
+          <img class="msvBD zC7z7b" srcset="https://lh3.googleusercontent.com/proxy/frhdddi6EkxoZb6eaLxTm52C3sJ30qWjTbvBem_Dj5vaIe7CRLcMWqceFNtHlKmuxNWgLU88rrimxWtPIOojWdV7zRLYQcHEnupwee8rLuumCdFFQ3_8eu3GPVcr7a06apRDgoryUh3m1JuMgSjiy42iE-B5YuDaICFzqzV551wQUG1hoYa2MyQjRKlh=h12-rw 1x, https://lh3.googleusercontent.com/proxy/frhdddi6EkxoZb6eaLxTm52C3sJ30qWjTbvBem_Dj5vaIe7CRLcMWqceFNtHlKmuxNWgLU88rrimxWtPIOojWdV7zRLYQcHEnupwee8rLuumCdFFQ3_8eu3GPVcr7a06apRDgoryUh3m1JuMgSjiy42iE-B5YuDaICFzqzV551wQUG1hoYa2MyQjRKlh=h24-rw 2x" alt="" src="https://lh3.googleusercontent.com/proxy/frhdddi6EkxoZb6eaLxTm52C3sJ30qWjTbvBem_Dj5vaIe7CRLcMWqceFNtHlKmuxNWgLU88rrimxWtPIOojWdV7zRLYQcHEnupwee8rLuumCdFFQ3_8eu3GPVcr7a06apRDgoryUh3m1JuMgSjiy42iE-B5YuDaICFzqzV551wQUG1hoYa2MyQjRKlh=h12-rw" loading="lazy">
+          <h4>‘We stand by India’: Tibetans in Arunachal Pradesh protest against China changing place names</h4>
+        </div>
+        <div class="side_ele_right two_right"><img class="side_ele_right_img" src="https://static.theprint.in/wp-content/uploads/2023/04/Untitled-design-10-1-1.png?compress=true&quality=80&w=800&dpr=1.0" alt=""></div>
+        </div>
+        <div class="time_div">
+        <h5>6 hours ago</h5>
+        <img class="cal" alt="" src="https://lh3.googleusercontent.com/JDFOyo903E9WGstK0YhI2ZFOKR3h4qDxBngX5M8XJVBZFKzOBoxLmk3OVlgNw9SOE-HfkNgb=w40-rw">
+        </div>
+
+        <div class="side_element">
+        <div class="side_ele_left">
+          <img class="" src="https://lh3.googleusercontent.com/jKYgO8ulUFIuqNkrnSiZUs_d9To3nIljsM8WxTEZPBEt8b_Qh23wFW08cWR1QaT1N2r-cU6spg=h12-rw" loading="lazy">
+          <h4>Google teases taking Pixel Call Screen ‘even further’ this year with AI</h4>
+        </div>
+        <div class="side_ele_right two_right"><img class="side_ele_right_img" src="https://i0.wp.com/9to5google.com/wp-content/uploads/sites/4/2022/01/Call-Screen-1.jpg?w=1500&quality=82&strip=all&ssl=1" alt=""></div>
+        </div>
+        <div class="time_div">
+        <h5>2 hours ago</h5>
+        <img class="cal" alt="" src="https://lh3.googleusercontent.com/JDFOyo903E9WGstK0YhI2ZFOKR3h4qDxBngX5M8XJVBZFKzOBoxLmk3OVlgNw9SOE-HfkNgb=w40-rw">
+        </div>
+      </div>
+    </div>
+    
+    <div class="bottom_div">
+      <a href="#"><h3> Get more news based on your interests</h3></a>
+      <button class="for_u">For you</button>
+    </div>
+  </div>
+
 </body>
+
 </html>
