@@ -1,0 +1,417 @@
+*{
+	font-family: 'Open Sans', sans-serif;
+	background-color: #292A2D;
+	color: white;
+	margin: 0 0 0 0;
+	padding: 0 0 0 0;
+}
+
+nav,a,h1,h2, h3,h4, h5, h6, p{
+	background-color: transparent;
+}
+h1{
+	font-weight: 400;
+	font-size: 26px;
+}
+
+h2{
+	font-weight: 600;
+	font-size: 1.2rem;
+	color: #8BB8F8;
+
+	padding-bottom:10px ;
+
+}
+h3{
+	font-weight: 500;
+
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+h6{
+	font-size: 14px;
+	margin-bottom: 5px;
+}
+h5{
+	font-size: 14px;
+	font-weight: 400;
+	color: #c4c7c5;
+}
+
+p{
+	background-color: transparent;
+	font-size: 15px;
+}
+a{
+	text-decoration: none;
+}
+
+.logo,.logo_div,.nav_input,.big_div,.input_side,.side_items,.options,.bottom_nav,.bottom_item,.main_news,.main_child,.main_child_left, .main_img_div,.main_top_right_img,.main_top_right_arrow,.main_top_right_content,.state, .main_child_right,.main_child_right_ele,.top_side_div,.city,.cities,.side_element,.side_ele_left,.side_ele_right,.time_div,.bottom_side_div{
+	background-color: #1F1F1F;
+}
+
+
+.top_nav{
+	display: flex;
+	justify-content: space-between;
+	padding:8px 10px 20px 0px;
+	background-color: #1F1F1F;
+}
+
+.big_div{
+	display: flex;
+	height: 50px;
+}
+
+
+
+.logo_div,.logo{
+	height: 50px;
+}
+
+.nav_input{
+	display: flex;
+	height: 50px;
+	border-radius: 10px 10px 10px 10px; 
+}
+
+.input_side{
+	display: flex;
+	height: 50px;
+	width: 80px;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.dropdown,.search{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #3C4043;
+}
+.search{
+	border-radius: 10px 0px 0px 10px; 
+}
+.sear{
+	background-color: #3C4043;
+	width: 50px;
+	border-radius: 10px 0px 0px 10px; 
+}
+
+.dropdown{
+	border-color: #3C4043;
+	width: 70px;
+	border-radius: 0px 10px 10px 0px; 
+}
+
+
+
+.txt_box{
+	width: 500px;
+	height: 100%;
+	font-size: 16px;
+	font-weight: 500;
+	color: #BABBBC;
+	background-color: #3C4043;
+	border: none;
+}
+
+
+.drop{
+	height: 16px;
+	background-color: #3C4043;
+}
+
+.side_items{
+	width: 68px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.side_img{
+	border-radius: 100%;
+}
+
+.bottom_nav{
+	display: flex;
+	justify-content: center;
+}
+
+.bottom_item{
+	display: flex;
+	padding: 0px 0px 10px 0px;
+}
+
+.bottom_item>h4{
+	color: #F1FFFF;
+	font-size: 14px;
+	font-weight: 500;
+	padding-left: 15px;
+	padding-right: 15px ;
+}
+
+.mid{
+	height: 20px;
+	border-left: #5E5E5E solid 1px;
+	margin-right: 10px;
+}
+
+
+
+.main_top{
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 10px;
+}
+
+.main_top_right{
+	/* border-radius: 12px; */
+	margin-right: 10px;
+}
+
+.main_top_right_arrow{
+	border-radius: 12px 0px 0px 12px;
+}
+
+.main_top_right_content{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding-right: 10px;
+	border-radius: 0px 12px 12px 0px;
+}
+.weather{
+	background-color: #1F1F1F;
+}
+.main_top,.state{
+	display: flex;
+}
+
+
+.main_top_right_content>h3{
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+.main_top_right_content>a>p{
+	font-size: 12px;
+	color: #8BB8F8
+}
+
+.main_top_left>p{
+	padding-top: 6px;
+}
+
+.main_top_right{
+	display: flex;
+}
+
+.main{
+	width: 60%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 20px;
+}
+.news_div{
+  display: flex;
+
+}
+.main_news{
+	padding: 15px;
+	width: 62%;
+	border-radius: 20px;
+	margin-right: 20px;
+	
+}
+.main_img{
+	width: 280px;
+	border-radius: 10px ;
+}
+.main_child{
+	display: flex;
+	margin-bottom: 20px;
+	padding-top: 15px;
+	border-top: 1px solid #5E5E5E;
+}
+
+.main_child_left{
+	width: 41%;
+	
+	
+}
+
+.main_child_right{
+	display: flex;
+	flex-direction: column;
+	width: 55%;
+	margin-left: 20px;
+	justify-content: space-between;
+}
+
+.side_news{
+	width: 30%;
+	height: fit-content;
+}
+.top_side_div,.bottom_side_div{
+	width: 100%;
+	padding: 15px;
+	border-radius: 20px;
+}
+.city{
+	display: flex;
+	justify-content: space-between;
+}
+.control{
+	fill: white;
+	background-color: transparent;
+}
+.cities{
+	display: flex;
+	
+}
+.cities>div{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-right: 10px;
+	height: 30px;
+	padding: 3px 5px 3px 5px;
+	min-width: 40px;
+	background-color: #1F1F1F;
+	border: 1px solid #5E5E5E;
+	border-radius: 10px;
+}
+.cities>div>h6{
+	font-weight: 500;
+}
+
+#active_city{
+	background-color: #2d4243;
+}
+.side_element{
+	display: flex;
+	margin-top: 10px;
+	padding-top: 10px;
+	border-top: #5E5E5E solid 1px;
+	
+}
+.side_ele_left{
+	width: 75%;
+}
+.side_ele_left>h4{
+	font-weight: 400;
+	font-size: 15px;
+	
+}
+.side_ele_right{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 25%;
+}
+.side_ele_right_img{
+	margin-left: 10px;
+	margin-bottom: 10px;
+	width: 64px;
+	height: 64px;
+	border-radius: 10px;
+}
+.time_div{
+	display: flex;
+	justify-content: space-between;
+	margin-top: 5px;
+}
+.time_div>img{
+	height: 20px;
+}
+.bottom_side_div{
+	margin-top: 20px;
+}
+
+.main_left{
+	width: 80%;
+}
+
+.large{
+	display: flex;
+	justify-content: end;
+}
+.large>img{
+	height: 100px;
+	width: 100px;
+	border-radius: 10px;
+	object-fit: cover;
+}
+
+.between{
+	margin-top: 50px;
+	margin-bottom: 20px;
+}
+
+.customise{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border: #5E5E5E solid 1px;
+	padding: 2px 10px 2px 10px;
+	border-radius: 20px;
+}
+
+.topics{
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
+}
+
+.topic_item{
+	width: 30%;
+}
+
+.city>h2{
+	color: white;
+}
+
+.two_div{
+	background-color: #1F1F1F;
+	display: flex;
+	gap: 10px;
+	padding: 15px;
+	border-radius: 20px;
+}
+
+.left,.right{
+	background-color: #1F1F1F;
+	width: 50%;
+}
+
+.top{
+	border: 0px;
+}
+
+.two_right{
+	justify-content: right;
+}
+
+.middle{
+	border: #5E5E5E solid 1px;
+}
+
+
+.bottom_div{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin: 50px 0px 50px 0px;
+}
+
+.for_u{
+	border: none;
+	width: 100px;
+	font-size: 14px;
+	margin-top: 20px;
+	padding: 8px 5px 8px 5px;
+	border-radius: 30px;
+	background-color: #8BB8F8;
+	color: black;
+}
